@@ -1,0 +1,6 @@
+- variable: somedefault
+  label: some code
+  description: "code"
+  default: "982345235"
+  required: true
+  type: string
