@@ -13,6 +13,6 @@ metadata:
   name: external-service
 subsets:
 - addresses:
-    ip: 10.10.10.10
+  - ip: 10.10.10.10
   ports:
-    port: 8080
+  - port: 8080
