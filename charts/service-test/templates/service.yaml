@@ -4,6 +4,8 @@ kind: Endpoints
 apiVersion: v1
 metadata:
   name: external-service
+  labels:
+    some: label
 subsets:
 - addresses:
   - ip: 10.10.10.10
@@ -17,6 +19,8 @@ kind: Service
 metadata:
   name: external-service
 spec:
+  selector:
+    some: label
   ports:
   - port: 80
     targetPort: 8080
