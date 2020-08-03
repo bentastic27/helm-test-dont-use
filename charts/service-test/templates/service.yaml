@@ -12,7 +12,7 @@ apiVersion: v1
 metadata:
   name: external-service
 subsets:
-  addresses:
+- addresses:
     ip: 10.10.10.10
   ports:
     port: 8080
