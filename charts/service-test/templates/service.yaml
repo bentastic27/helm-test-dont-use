@@ -1,3 +1,4 @@
+{{ if .Values.endpoint }}
 ---
 kind: Endpoints
 apiVersion: v1
@@ -8,6 +9,8 @@ subsets:
   - ip: 10.10.10.10
   ports:
   - port: 8080
+{{ end }}
+{{ if .Values.service }}
 ---
 apiVersion: v1
 kind: Service
@@ -17,4 +20,4 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
-
+{{ end }}
